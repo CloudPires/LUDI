@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_snc_ludi_v1_ludi_voice">
+    <x_snc_ludi_v1_ludi_voice action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <command><![CDATA[annyang.addCommands({
+	'show my approvals': function(tag) {
+		SpeechKITT.abortRecognition();
+		
+				getRandomResponse();
+		
+			parent.window.location = '/nav_to.do?uri=%2Fsysapproval_approver_list.do%3Fsysparm_query%3DapproverDYNAMIC90d1921e5f510100a9ad2572f2b477fe%255Estate%253Drequested%26sysparm_first_row%3D1%26sysparm_view%3D';
+			
+		
+	}
+	
+	
+});
+]]></command>
+        <input>show my approvals</input>
+        <needs_command>false</needs_command>
+        <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 19:58:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9aaaf3be4fae7600c16c4fa18110c7ad</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>x_snc_ludi_v1_ludi_voice_9aaaf3be4fae7600c16c4fa18110c7ad</sys_update_name>
+        <sys_updated_by>BrentL</sys_updated_by>
+        <sys_updated_on>2017-05-09 19:59:04</sys_updated_on>
+        <type>run_script</type>
+    </x_snc_ludi_v1_ludi_voice>
+</record_update>

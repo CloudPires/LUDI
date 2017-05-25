@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_snc_ludi_v1_ludi_voice">
+    <x_snc_ludi_v1_ludi_voice action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <command><![CDATA[annyang.addCommands({
+	'open bookmark *tag': function(tag) {
+				SpeechKITT.abortRecognition();
+				responsiveVoice.speak('LEt me find that for you.', "UK English Male", {
+					volume: 1
+				});
+		console.log('go to bookmark: '+tag);
+		var ga2 = new GlideAjax('x_snc_ludi_v1.LUDI_scriptInclude');
+		ga2.addParam('sysparm_name', 'getBookMarks');
+		ga2.addParam('sysparm_bookMark', tag);
+		ga2.getXMLAnswer(function(answer) {
+			console.log(answer);
+			if (answer){
+				getRandomResponse();
+				parent.window.location = '/nav_to.do?uri=/'+answer;
+			} else {
+				responsiveVoice.speak('I was unable to locate that bookmark.', "UK English Male", {
+					volume: 1
+				});
+			}
+				SpeechKITT.abortRecognition();
+			});
+		}
+		
+	});
+	]]></command>
+        <input>Go to *bookmark</input>
+        <needs_command>false</needs_command>
+        <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 18:21:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>77746f3e4fa2b6007ad7e4928110c738</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>x_snc_ludi_v1_ludi_voice_77746f3e4fa2b6007ad7e4928110c738</sys_update_name>
+        <sys_updated_by>BrentL</sys_updated_by>
+        <sys_updated_on>2017-05-09 18:56:20</sys_updated_on>
+        <type>run_script</type>
+    </x_snc_ludi_v1_ludi_voice>
+</record_update>

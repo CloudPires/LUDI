@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="command" label="Command" language="en" table="rep$x_snc_ludi_v1_ludi_voice">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>command</element>
+            <help/>
+            <hint/>
+            <label>Command</label>
+            <language>en</language>
+            <name>rep$x_snc_ludi_v1_ludi_voice</name>
+            <plural>Commands</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-05-25 18:53:29</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>67458a44db4fbe005dbe38f0ad961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Command</sys_name>
+            <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+            <sys_update_name>sys_documentation_rep$x_snc_ludi_v1_ludi_voice_command_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-05-25 18:53:29</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

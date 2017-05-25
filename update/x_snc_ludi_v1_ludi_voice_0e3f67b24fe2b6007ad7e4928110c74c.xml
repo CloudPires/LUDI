@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_snc_ludi_v1_ludi_voice">
+    <x_snc_ludi_v1_ludi_voice action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <command><![CDATA[annyang.addCommands({
+	'my approvals *tag': function(tag) {
+		SpeechKITT.abortRecognition();
+		console.log('my approvals: '+tag);
+		if (tag == 'approve all' || tag == 'reject all'){
+			var ga2 = new GlideAjax('x_snc_ludi_v1.LUDI_scriptInclude');
+			ga2.addParam('sysparm_name', 'myApprovals');
+			if (tag == 'approve all'){
+				ga2.addParam('sysparm_action', 'approved');
+			} else {
+				ga2.addParam('sysparm_action', 'rejected');
+			}
+			
+			ga2.getXMLAnswer(function(answer) {
+				console.log(answer);
+				if (answer == 'approved'){
+					window.speechSynthesis.speak(new SpeechSynthesisUtterance('Getting stuff done!'));
+
+				} else {
+					window.speechSynthesis.speak(new SpeechSynthesisUtterance('hahaha'));
+					
+				}
+			});
+		} else {
+			responsiveVoice.speak('Im not certain what are you wanting to do with your approvals?', "UK English Male", {
+				volume: 1
+			});
+			
+		}
+		
+	}
+	
+	
+});
+]]></command>
+        <input>my approvals *tag</input>
+        <needs_command>false</needs_command>
+        <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 19:08:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0e3f67b24fe2b6007ad7e4928110c74c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>x_snc_ludi_v1_ludi_voice_0e3f67b24fe2b6007ad7e4928110c74c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-25 18:40:17</sys_updated_on>
+        <type>run_script</type>
+    </x_snc_ludi_v1_ludi_voice>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_snc_ludi_v1_ludi_voice">
+    <x_snc_ludi_v1_ludi_voice action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <command><![CDATA[annyang.addCommands({
+            'Wiki *tag': function(tag) { 
+				console.log('wiki search');
+				getRandomResponse();
+				window.open("http://wiki.servicenow.com/index.php?title=Main_Page#gsc.tab=0&gsc.q="+tag+"&gsc.sort=",'_blank');
+                SpeechKITT.abortRecognition();
+            }
+
+        });]]></command>
+        <input>wiki *tag</input>
+        <needs_command>false</needs_command>
+        <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 17:54:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>947e5f7a4fa2b6007ad7e4928110c79c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>x_snc_ludi_v1_ludi_voice_947e5f7a4fa2b6007ad7e4928110c79c</sys_update_name>
+        <sys_updated_by>BrentL</sys_updated_by>
+        <sys_updated_on>2017-05-09 18:09:42</sys_updated_on>
+        <type>run_script</type>
+    </x_snc_ludi_v1_ludi_voice>
+</record_update>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_snc_ludi_v1_ludi_voice">
+    <x_snc_ludi_v1_ludi_voice action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <command><![CDATA[annyang.addCommands({
+	'weather *tag': function(tag) {
+		var ga2 = new GlideAjax('x_snc_ludi_v1.LUDI_scriptInclude');
+		ga2.addParam('sysparm_name', 'getWeather');
+		ga2.addParam('sysparm_search', tag);
+		ga2.getXMLAnswer(function(answer) {
+			console.log(JSON.parse(answer));
+			var weather = JSON.parse(answer);
+			
+			var myLocation = weather.query.results.channel.location.city;
+			var high = weather.query.results.channel.item.forecast["0"].high;
+			var low = weather.query.results.channel.item.forecast["0"].low;
+			var temp = weather.query.results.channel.item.condition.temp;
+			var currentCondition = weather.query.results.channel.item.condition.text;
+			
+			var weatherReport = "The current weather condition for " +myLocation+" is "+currentCondition+" with a tempature of "+temp+". The high for today is "+high+"and low is "+low;
+			
+			responsiveVoice.speak(weatherReport, "UK English Male", {
+				volume: 1
+				
+			});
+			SpeechKITT.abortRecognition();
+		});
+	}
+	
+});
+]]></command>
+        <input>weather *tag</input>
+        <needs_command>false</needs_command>
+        <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 16:38:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>76ec03fa4f62b6007ad7e4928110c7cb</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>x_snc_ludi_v1_ludi_voice_76ec03fa4f62b6007ad7e4928110c7cb</sys_update_name>
+        <sys_updated_by>BrentL</sys_updated_by>
+        <sys_updated_on>2017-05-09 17:50:45</sys_updated_on>
+        <type>run_script</type>
+    </x_snc_ludi_v1_ludi_voice>
+</record_update>

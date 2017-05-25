@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             //console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
             // SpeechKITT.setAbortCommand(function() {recognition.abort()});
             SpeechKITT.toggleRecognition();
-            responsiveVoice.speak("i'm sorry, i did not understaand the question", "UK English Male", { volume: 1 });
+            window.speechSynthesis.speak(new SpeechSynthesisUtterance("i'm sorry, i did not understaand the question"))
         });
 
         // Tell KITT to use annyang
@@ -42,10 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function getRandomResponse() {
-    responsiveVoice.speak(randomReponse(), "UK English Male", {
-        volume: 1
-
-    });
+    window.speechSynthesis.speak(new SpeechSynthesisUtterance(randomReponse()))
 }
 
 
@@ -62,7 +59,7 @@ function createMissingInput(input) {
 }
 
 function randomReponse() {
-    var items = ['okie dokey', 'sure thing', 'right on it', 'you got it dude']
+    var items = ['okay dokey', 'sure thing', 'right on it', 'you got it dude']
     var item = items[Math.floor(Math.random() * items.length)];
     return item;
 }
@@ -102,15 +99,15 @@ function loadCommands() {
         <sys_created_on>2017-05-09 14:32:27</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>0410f2f24f2e7600c16c4fa18110c759</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>x_snc_ludi_v1.LUDImain</sys_name>
         <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
         <sys_update_name>sys_ui_script_0410f2f24f2e7600c16c4fa18110c759</sys_update_name>
-        <sys_updated_by>msaxton</sys_updated_by>
-        <sys_updated_on>2017-05-09 20:57:21</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-25 18:48:22</sys_updated_on>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>
 </record_update>
