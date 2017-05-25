@@ -97,7 +97,7 @@ function loadCommands() {
         <sys_class_name>sys_ui_script</sys_class_name>
         <sys_created_by>msaxton</sys_created_by>
         <sys_created_on>2017-05-09 14:32:27</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>0410f2f24f2e7600c16c4fa18110c759</sys_id>
         <sys_mod_count>43</sys_mod_count>
         <sys_name>x_snc_ludi_v1.LUDImain</sys_name>

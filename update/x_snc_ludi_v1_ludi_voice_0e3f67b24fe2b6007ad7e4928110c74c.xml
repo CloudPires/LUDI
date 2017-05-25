@@ -40,7 +40,7 @@
         <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
         <sys_created_by>BrentL</sys_created_by>
         <sys_created_on>2017-05-09 19:08:07</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>0e3f67b24fe2b6007ad7e4928110c74c</sys_id>
         <sys_mod_count>7</sys_mod_count>
         <sys_name/>

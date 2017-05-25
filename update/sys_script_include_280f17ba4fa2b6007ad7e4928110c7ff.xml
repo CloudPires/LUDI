@@ -31,7 +31,7 @@ LUDI_ask_a_question.prototype = Object.extendsObject(global.AbstractAjaxProcesso
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>thoge</sys_created_by>
         <sys_created_on>2017-05-09 18:10:59</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>280f17ba4fa2b6007ad7e4928110c7ff</sys_id>
         <sys_mod_count>8</sys_mod_count>
         <sys_name>LUDI_ask_a_question</sys_name>

@@ -31,7 +31,7 @@
         <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
         <sys_created_by>BrentL</sys_created_by>
         <sys_created_on>2017-05-09 16:38:15</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>76ec03fa4f62b6007ad7e4928110c7cb</sys_id>
         <sys_mod_count>11</sys_mod_count>
         <sys_name/>

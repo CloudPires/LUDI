@@ -7,7 +7,7 @@
         <sys_class_name>sys_scope_privilege</sys_class_name>
         <sys_created_by>msaxton</sys_created_by>
         <sys_created_on>2017-05-09 17:13:35</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>2405d7f64f6e7600c16c4fa18110c7f8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>ScriptableRESTMessageClient.setEndpoint</sys_name>

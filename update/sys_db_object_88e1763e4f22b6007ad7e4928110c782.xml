@@ -17,11 +17,11 @@
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Application File" name="sys_metadata">dee3a930dbcaf2005dbe38f0ad9619fd</super_class>
+        <super_class display_value="Application File" name="sys_metadata">497723321902320092c0a763583fa454</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_created_by>thoge</sys_created_by>
         <sys_created_on>2017-05-09 14:41:10</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>88e1763e4f22b6007ad7e4928110c782</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>LUDI Voice</sys_name>

@@ -52,8 +52,8 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>thoge</sys_created_by>
         <sys_created_on>2017-05-09 19:09:54</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
-        <sys_id>077f63f24fe2b6007ad7e4928110c7bf</sys_id>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>98f86e88dbc7320014a7d170cf96195a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>command</sys_name>
         <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
@@ -61,8 +61,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_ludi_v1_ludi_missed_command_command</sys_update_name>
-        <sys_updated_by>thoge</sys_updated_by>
-        <sys_updated_on>2017-05-09 19:09:54</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2017-05-25 21:29:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

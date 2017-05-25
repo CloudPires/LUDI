@@ -32,7 +32,7 @@
         <sys_class_name>x_snc_ludi_v1_ludi_voice</sys_class_name>
         <sys_created_by>thoge</sys_created_by>
         <sys_created_on>2017-05-09 17:44:24</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>e30c173a4fa2b6007ad7e4928110c762</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_name/>

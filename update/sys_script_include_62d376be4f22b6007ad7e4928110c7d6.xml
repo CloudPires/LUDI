@@ -98,7 +98,7 @@ LUDI_scriptInclude.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>BrentL</sys_created_by>
         <sys_created_on>2017-05-09 14:50:04</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>62d376be4f22b6007ad7e4928110c7d6</sys_id>
         <sys_mod_count>40</sys_mod_count>
         <sys_name>LUDI_scriptInclude</sys_name>
