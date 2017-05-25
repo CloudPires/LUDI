@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_ludi_v1.ludiDynamic</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ludiDynamic</name>
+        <script><![CDATA[var ludiDynamic = Class.create();
+ludiDynamic.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+aggregate : function (){
+	var table = this.getParameter('sysparm_table');
+	var query = this.getParameter('sysparm_query');
+	var count = new GlideAggregate(table);
+count.addEncodedQuery(query);
+count.addAggregate('COUNT');
+count.query();
+var returnCount = 0;
+if (count.next()){
+   returnCount = count.getAggregate('COUNT');
+}
+	return returnCount;
+},
+    type: 'ludiDynamic'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>msaxton</sys_created_by>
+        <sys_created_on>2017-05-09 17:23:24</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1727d37a4f6e7600c16c4fa18110c768</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ludiDynamic</sys_name>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>sys_script_include_1727d37a4f6e7600c16c4fa18110c768</sys_update_name>
+        <sys_updated_by>msaxton</sys_updated_by>
+        <sys_updated_on>2017-05-09 17:31:55</sys_updated_on>
+    </sys_script_include>
+</record_update>

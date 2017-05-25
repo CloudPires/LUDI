@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="LUDI missed command" max_length="40" name="x_snc_ludi_v1_ludi_missed_command" type="collection">
+        <element label="command" max_length="2000" name="command" type="string"/>
+        <element label="Count" max_length="40" name="count" type="integer"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

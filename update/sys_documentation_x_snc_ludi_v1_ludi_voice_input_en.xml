@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="input" label="Input" language="en" table="x_snc_ludi_v1_ludi_voice">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>input</element>
+            <help/>
+            <hint/>
+            <label>Input</label>
+            <language>en</language>
+            <name>x_snc_ludi_v1_ludi_voice</name>
+            <plural>Inputs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>thoge</sys_created_by>
+            <sys_created_on>2017-05-09 14:50:10</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>9f24be3e4f22b6007ad7e4928110c70a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Input</sys_name>
+            <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_ludi_v1_ludi_voice_input_en</sys_update_name>
+            <sys_updated_by>thoge</sys_updated_by>
+            <sys_updated_on>2017-05-09 14:50:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

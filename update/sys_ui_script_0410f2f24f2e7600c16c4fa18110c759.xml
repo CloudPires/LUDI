@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>true</global>
+        <name>x_snc_ludi_v1.LUDImain</name>
+        <script><![CDATA[document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script><script src="https://code.responsivevoice.org/responsivevoice.js"></script>');
+document.addEventListener("DOMContentLoaded", function(event) {
+    //do work
+
+    if (annyang) {
+        // Add our commands to annyang
+        loadCommands();
+        annyang.debug
+        document.onkeyup=function(e){
+		var e = e || window.event; // for IE to cover IEs window object
+    if(e.altKey && e.which == 65) { 
+         SpeechKITT.toggleRecognition();
+         return false;
+    }
+}
+        annyang.addCallback('resultNoMatch', function(userSaid, commandText, phrases) {
+            //console.log(userSaid); // sample output: 'hello'
+            createMissingInput(userSaid[0]);
+            //console.log(commandText); // sample output: 'hello (there)'
+            //console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+            // SpeechKITT.setAbortCommand(function() {recognition.abort()});
+            SpeechKITT.toggleRecognition();
+            responsiveVoice.speak("i'm sorry, i did not understaand the question", "UK English Male", { volume: 1 });
+        });
+
+        // Tell KITT to use annyang
+        SpeechKITT.annyang();
+
+        // Define a stylesheet for KITT to use
+        SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+
+        // Render KITT's interface
+        SpeechKITT.vroom();
+    }
+});
+
+function getRandomResponse() {
+    responsiveVoice.speak(randomReponse(), "UK English Male", {
+        volume: 1
+
+    });
+}
+
+
+
+function createMissingInput(input) {
+    var ga2 = new GlideAjax('x_snc_ludi_v1.LUDI_scriptInclude');
+    ga2.addParam('sysparm_name', 'missInput');
+    ga2.addParam('sysparm_input', input);
+    ga2.getXMLAnswer(function(answer) {
+       // console.log(answer);
+
+
+    });
+}
+
+function randomReponse() {
+    var items = ['okie dokey', 'sure thing', 'right on it', 'you got it dude']
+    var item = items[Math.floor(Math.random() * items.length)];
+    return item;
+}
+
+function flipAcoin() {
+    var items = ['heads', 'tails', 'heads', 'tails']
+    var item = items[Math.floor(Math.random() * items.length)];
+    return item;
+}
+
+function rockpaper() {
+    var items = ['Rock', 'Paper', 'Scissors', 'Rock', 'Paper', 'Scissors']
+    var item = items[Math.floor(Math.random() * items.length)];
+    return item;
+}
+
+
+function loadCommands() {
+    var ga2 = new GlideAjax('x_snc_ludi_v1.LUDI_scriptInclude');
+    ga2.addParam('sysparm_name', 'executeCommand');
+    ga2.getXMLAnswer(function(answer) {
+        //console.log(answer);
+
+        var objArr = answer.evalJSON(true);
+        for (i = 0; i < objArr.arr.length; i++) {
+            //Eval is coming from a trusted source.
+            eval(objArr.arr[i]);
+        }
+
+
+    });
+}
+]]></script>
+        <script_name>LUDImain</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>msaxton</sys_created_by>
+        <sys_created_on>2017-05-09 14:32:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0410f2f24f2e7600c16c4fa18110c759</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>x_snc_ludi_v1.LUDImain</sys_name>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>sys_ui_script_0410f2f24f2e7600c16c4fa18110c759</sys_update_name>
+        <sys_updated_by>msaxton</sys_updated_by>
+        <sys_updated_on>2017-05-09 20:57:21</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

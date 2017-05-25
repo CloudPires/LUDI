@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 18:29:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>bf66ef7e4fa2b6007ad7e4928110c7d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_ui_bookmark</sys_name>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>sys_scope_privilege_bf66ef7e4fa2b6007ad7e4928110c7d1</sys_update_name>
+        <sys_updated_by>BrentL</sys_updated_by>
+        <sys_updated_on>2017-05-09 18:29:45</sys_updated_on>
+        <target_name>sys_ui_bookmark</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

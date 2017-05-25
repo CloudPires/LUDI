@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="LUDI Voice">a312f23e4f22b6007ad7e4928110c7fd</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>LUDI Voices</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_snc_ludi_v1_ludi_voice</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_snc_ludi_v1.ludi_voice_user</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>thoge</sys_created_by>
+        <sys_created_on>2017-05-09 14:41:10</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f12f23e4f22b6007ad7e4928110c7ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LUDI Voices</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>sys_app_module_6f12f23e4f22b6007ad7e4928110c7ff</sys_update_name>
+        <sys_updated_by>thoge</sys_updated_by>
+        <sys_updated_on>2017-05-09 14:41:10</sys_updated_on>
+        <timeline_page/>
+        <title>LUDI Voices</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

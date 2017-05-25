@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="3970f7f24fe2b6007ad7e4928110c782" sys_domain="global" table="x_snc_ludi_v1_ludi_missed_command" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>command</element>
+            <position>0</position>
+            <sys_created_by>thoge</sys_created_by>
+            <sys_created_on>2017-05-09 19:13:35</sys_created_on>
+            <sys_id>0670fbf24fe2b6007ad7e4928110c739</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_ludi_v1_ludi_missed_command" sys_domain="global" view="Default view">3970f7f24fe2b6007ad7e4928110c782</sys_ui_section>
+            <sys_updated_by>thoge</sys_updated_by>
+            <sys_updated_on>2017-05-09 19:13:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <position>1</position>
+            <sys_created_by>thoge</sys_created_by>
+            <sys_created_on>2017-05-09 19:13:35</sys_created_on>
+            <sys_id>8a70fbf24fe2b6007ad7e4928110c739</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_ludi_v1_ludi_missed_command" sys_domain="global" view="Default view">3970f7f24fe2b6007ad7e4928110c782</sys_ui_section>
+            <sys_updated_by>thoge</sys_updated_by>
+            <sys_updated_on>2017-05-09 19:13:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>count</element>
+            <position>2</position>
+            <sys_created_by>msaxton</sys_created_by>
+            <sys_created_on>2017-05-09 19:48:29</sys_created_on>
+            <sys_id>257833fa4fae7600c16c4fa18110c7a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_ludi_v1_ludi_missed_command" sys_domain="global" view="Default view">3970f7f24fe2b6007ad7e4928110c782</sys_ui_section>
+            <sys_updated_by>msaxton</sys_updated_by>
+            <sys_updated_on>2017-05-09 19:48:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_ludi_v1_ludi_missed_command</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>thoge</sys_created_by>
+            <sys_created_on>2017-05-09 19:13:34</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3970f7f24fe2b6007ad7e4928110c782</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_ludi_v1_ludi_missed_command</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+            <sys_update_name>sys_ui_section_3970f7f24fe2b6007ad7e4928110c782</sys_update_name>
+            <sys_updated_by>thoge</sys_updated_by>
+            <sys_updated_on>2017-05-09 19:13:34</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

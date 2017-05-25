@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_ludi_v1.LUDI_orderiphone</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>LUDI_orderiphone</name>
+        <script><![CDATA[var LUDI_orderiphone = Class.create();
+LUDI_orderiphone.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	order: function() {
+		var cartId = "LUDI_orderiphone";
+		var cart = new global.Cart(cartId);
+		var item = cart.addItem('d0b15e33d7033100a9ad1e173e24d49e'); 
+		var rc = cart.placeOrder();
+		
+		var gr = new GlideRecord('sc_req_item');
+		gr.get('request',rc.sys_id);
+		
+		
+		return gr.sys_id;
+		
+		
+	},
+	
+	type: 'LUDI_orderiphone'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>thoge</sys_created_by>
+        <sys_created_on>2017-05-09 18:31:26</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>b0d6ef7e4fa2b6007ad7e4928110c7ae</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>LUDI_orderiphone</sys_name>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>sys_script_include_b0d6ef7e4fa2b6007ad7e4928110c7ae</sys_update_name>
+        <sys_updated_by>thoge</sys_updated_by>
+        <sys_updated_on>2017-05-09 18:58:29</sys_updated_on>
+    </sys_script_include>
+</record_update>

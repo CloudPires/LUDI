@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_ludi_v1.LUDI_scriptInclude</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>LUDI_scriptInclude</name>
+        <script><![CDATA[var LUDI_scriptInclude = Class.create();
+LUDI_scriptInclude.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	executeCommand: function(){
+		var response = {};
+			response.arr = [];
+			var gr = new GlideRecord('x_snc_ludi_v1_ludi_voice');
+			gr.addEncodedQuery('active=true');
+			gr.query();
+			while(gr.next()){
+				response.arr.push(gr.command.toString());
+			}
+			
+			return JSON.stringify(response);
+		},
+		
+		getWeather: function(){
+			
+			var search = this.getParameter('sysparm_search');
+			//search = '41011';
+			var rm = new sn_ws.RESTMessageV2();
+			rm.setHttpMethod('GET');
+			rm.setEndpoint('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + search + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys');
+			var response = rm.execute();
+			return response.getBody();
+			
+		},
+		
+		getJoke: function(){
+			var rm = new sn_ws.RESTMessageV2();
+			rm.setHttpMethod('GET');
+			rm.setEndpoint('https://tambal.azurewebsites.net/joke/random');
+			var response = rm.execute();
+			return response.getBody();
+			
+		},
+		
+		getBookMarks: function(){
+			
+			var bookMark = this.getParameter('sysparm_bookMark');
+			var gr = new GlideRecord('sys_ui_bookmark');
+			gr.addEncodedQuery("user="+gs.getUserID()+"^title="+bookMark);
+			gr.query();
+			if (gr.next()) {
+				return gr.url.toString();
+			}
+		},
+		
+		myApprovals: function(){
+			
+			var action = this.getParameter('sysparm_action');
+			
+			var gr = new GlideRecord('sysapproval_approver');
+			gr.addEncodedQuery("approverDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state=requested");
+			gr.query();
+			while (gr.next()) {
+				
+				gr.state= action;
+				gr.comments = 'State set to '+action+' by '+gs.getUserDisplayName();
+				gr.update();
+			}
+			return action;
+		},
+			missInput: function(){
+			var input = this.getParameter('sysparm_input');
+			var gr = new GlideRecord('x_snc_ludi_v1_ludi_missed_command');
+			gr.addEncodedQuery("command="+input);
+			gr.query();
+			if(gr.getRowCount() == 0){
+				var createRecord = new GlideRecord('x_snc_ludi_v1_ludi_missed_command');
+				createRecord.initialize();
+				createRecord.command = input;
+				createRecord.count = 1;
+				createRecord.user = gs.getUserID();
+				createRecord.insert();
+				return createRecord.sys_id;
+			} else {
+				if(gr.next()){
+				gr.count = gr.count + 1;
+				gr.update();
+				}
+			}
+				return gr.getRowCount();
+		},
+		
+		type: 'LUDI_scriptInclude'
+	});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>BrentL</sys_created_by>
+        <sys_created_on>2017-05-09 14:50:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>62d376be4f22b6007ad7e4928110c7d6</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>LUDI_scriptInclude</sys_name>
+        <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+        <sys_update_name>sys_script_include_62d376be4f22b6007ad7e4928110c7d6</sys_update_name>
+        <sys_updated_by>msaxton</sys_updated_by>
+        <sys_updated_on>2017-05-09 20:14:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

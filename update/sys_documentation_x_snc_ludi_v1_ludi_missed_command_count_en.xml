@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="count" label="Count" language="en" table="x_snc_ludi_v1_ludi_missed_command">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>count</element>
+            <help/>
+            <hint/>
+            <label>Count</label>
+            <language>en</language>
+            <name>x_snc_ludi_v1_ludi_missed_command</name>
+            <plural>Counts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>msaxton</sys_created_by>
+            <sys_created_on>2017-05-09 19:48:30</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a978373e4fae7600c16c4fa18110c7e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Count</sys_name>
+            <sys_package display_value="LUDI" source="x_snc_ludi_v1">101e26ba4f22b6007ad7e4928110c705</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="LUDI">101e26ba4f22b6007ad7e4928110c705</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_ludi_v1_ludi_missed_command_count_en</sys_update_name>
+            <sys_updated_by>msaxton</sys_updated_by>
+            <sys_updated_on>2017-05-09 19:48:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
